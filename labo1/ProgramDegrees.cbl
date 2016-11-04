@@ -1,0 +1,49 @@
+              PROGRAM-ID. ProgramDegrees AS "ProgramDegrees".
+
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 degres.
+           02 celcius             PIC S999     VALUE -100.
+           02 farenheit           PIC S999V99.
+           02 kelvin              PIC S999V99.
+       
+       01 degres-ed.
+           02 celcius-ed          PIC -ZZZ.
+           02 farenheit-ed        PIC -ZZZ.99.
+           02 kelvin-ed           PIC -ZZZ.99.
+         
+       PROCEDURE DIVISION.
+       
+       main.
+           PERFORM VARYING celcius FROM -100 BY 5 UNTIL celcius > 100
+               PERFORM sortieCelcius
+               PERFORM calculFarenheit
+               PERFORM sortieFarenheit
+               PERFORM calculKelvin
+               PERFORM sortieKelvin
+               DISPLAY "------------------"
+           END-PERFORM.
+           STOP RUN.
+       
+       sortieCelcius.
+           MOVE celcius TO celcius-ed.
+           DISPLAY "En degres celcius: " celcius-ed.
+       
+       calculFarenheit.
+           COMPUTE farenheit = celcius * (9/5) + 32.
+           
+       sortieFarenheit.
+           MOVE farenheit TO farenheit-ed.
+           DISPLAY "En degres farenheit: " farenheit-ed.
+           
+       calculKelvin.
+           ADD 273.15 TO celcius GIVING kelvin.
+           
+       sortieKelvin.
+           MOVE kelvin TO kelvin-ed.
+           DISPLAY "En degres kelvin: " kelvin-ed.
+       
+       END PROGRAM ProgramDegrees.
