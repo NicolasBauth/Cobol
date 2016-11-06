@@ -1,0 +1,58 @@
+       program-id. Serie3Ex1 as "Serie3Ex1".
+
+       environment division.
+       configuration section.
+       
+       data division.
+       working-storage section.
+           01 nom pic x(50).
+           01 prenom pic x(40).
+           01 numéro pic 999.
+           01 codePostal pic 9999.
+           01 localité pic x(30).
+           01 rue pic x(60).
+           01 texte pic x(200).
+       
+       procedure division.
+       main.
+           perform obtention.
+           perform stringing.
+           perform affichage.
+           
+       obtention.
+           display "Nom: " NO ADVANCING.
+           accept nom.
+           display "Prenom: " NO ADVANCING.
+           accept prenom.
+           display "numéro: " NO ADVANCING.
+           accept numéro.
+           display "codePostal: " NO ADVANCING.
+           accept codePostal.
+           display "localité: " NO ADVANCING.
+           accept localité.
+           display "rue: " NO ADVANCING.
+           accept rue.
+       stringing.
+           string prenom delimited by "  "
+                  space delimited by size
+                  nom delimited by "  "
+                  ", " delimited by size
+                  numéro delimited by size
+                  space delimited by size
+                  rue delimited by "    "
+                  " a " delimited by size
+                  codePostal delimited by size
+                  space delimited by size
+                  localité delimited by "   "
+                  into texte.
+       affichage.
+           display texte.
+           stop run.
+           end program Serie3Ex1.
+       
+           
+           
+       
+           
+
+       

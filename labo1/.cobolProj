@@ -149,7 +149,9 @@
          <file compile="false" path="ProgrammeFichiersEx.cbl" xsi:type="cobolFile"/>
          <file compile="false" path="ProgrammeFichiersEx2.cbl" xsi:type="cobolFile"/>
          <file compile="false" path="Listing2Ex3.cbl" xsi:type="cobolFile"/>
-         <file compile="true" path="ExempleString.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="ExempleString.cbl" xsi:type="cobolFile"/>
+         <file compile="false" path="Serie3Ex1.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="Serie3Ex2.cbl" xsi:type="cobolFile"/>
       </filetype>
       <filetype type="cobol.copybook" xsi:type="cobolFileContainer"/>
    </files>
